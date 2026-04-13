@@ -15,6 +15,7 @@ class Semgrep < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  no_autobump! because: "tags past 1.157.0 includes breaking build changes that is incompatible w/semgrep.rb"
   bottle do
     sha256 cellar: :any, arm64_tahoe:   "50a4311fe987ce2faa85e15d5869a317d73799e7f8ba82a28ba59fc2f23b9a0b"
     sha256 cellar: :any, arm64_sequoia: "c86b29a425107dfc9564c1f9a183b76e8205e224f433aa80b304665db3e8941e"
